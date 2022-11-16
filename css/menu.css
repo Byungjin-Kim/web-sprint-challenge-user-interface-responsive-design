@@ -16,39 +16,41 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 * {
     box-sizing: border-box;
+    /* max-width: 100%;
+    border: 1px solid red; */
 }
 
 html {
@@ -64,6 +66,8 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: rgb(225, 239, 230);
+    
 }
 
 h1 {
@@ -86,7 +90,14 @@ p, a {
     font-size: 3rem;
 }
 
+*{
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
 /* header section */
+
+
 header {
     width: 100%;
     height: 100vh;
@@ -94,7 +105,32 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
 }
+
+div.header {
+    background-color: rgb(0, 4, 17, .8);
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.social {
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;
+    gap: 7%;
+    margin: 2%;
+  }
 
 /* spacer */
 .spacer {
@@ -118,15 +154,94 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+
+.menu-container {
+    background-color: rgb(0, 4, 17, .8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu-section {
+    width: 35%;
+    padding: 2.5% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.menu h2 {
+    text-align: center;
+}
+
+.menu-item .price {
+    text-align: right;
+}
+
+.menu-item p {
+    padding-bottom: 5%;
+}
+
+.menu-item h4 {
+    width: 45%;
+}
+
+
 /* footer section */
+
 footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     width: 100%;
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17); 
+    color: white;
 }
+
+footer nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .Email {
+    width: 40%;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    width: 800px;
+    padding-right: 24px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color:rgb(0, 4, 17);
+    font-size: 2rem;
+  }
+
+
 
 /* mobile media query */
 @media (max-width: 428px) {
@@ -150,3 +265,4 @@ footer {
         font-size: 2rem;
     }
 }
+
